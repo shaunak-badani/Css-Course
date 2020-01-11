@@ -1,0 +1,22 @@
+{
+  "name": "css-course",
+  "version": "1.0.0",
+  "description": "Css course used to make beautiful shit",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass sass/main.scss css/style.css -w" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaunak-badani/Css-Course.git"
+  },
+  "author": "Shaunak Badani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaunak-badani/Css-Course/issues"
+  },
+  "homepage": "https://github.com/shaunak-badani/Css-Course#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
