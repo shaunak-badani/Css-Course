@@ -1,0 +1,55 @@
+.row {   
+   /*
+    Difference between width and max width is that it will occupy 114 rem if available. 
+    If not, then it will occupy 100% of the device width.
+    Hence making it responsive.
+    */
+
+    max-width: $grid-width; //1140px
+    margin: 0 auto;
+    
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    // To give your div a height you need this mixin
+    @include clearfix;
+
+    // attribute selector
+    [class^="col-"] {
+        // THIS IS ONE THING THAT IF YOU APPLY YOU CAN USE WIDTH 100% EVERYWHERE - (For Shaunak)
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        // calc allows us to do calculations in multiple units, 
+        // which is different from sass calculations, which does not allow cross unit calculations
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+
+    
+}
