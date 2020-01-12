@@ -35,6 +35,15 @@
         }
     }
 
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color-primary;
+        }
+    }
+
     &::after{
         content: ""; /* Has to be present otherwise the pseudo element won't show up on the page */
         display: inline-block;

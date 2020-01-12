@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: top; /*makes sure that the top of the image stays in its initial position */
     position: relative;
+    -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /* Includes the clip inside this polygon defined */
     clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /* Includes the clip inside this polygon defined */
 
     &__logo-box {
